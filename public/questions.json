@@ -1,0 +1,290 @@
+[
+    {
+      "id": 1,
+      "question": "How important do you consider video games compared to other activities?",
+      "answers": [
+        {"option": "a", "text": "Less important"},
+        {"option": "b", "text": "Equally important"},
+        {"option": "c", "text": "More important"}
+      ]
+    },
+    {
+      "id": 2,
+      "question": "What is the impact of video games on your social relationships?",
+      "answers": [
+        {"option": "a", "text": "No impact"},
+        {"option": "b", "text": "Slight alteration (less contact)"},
+        {"option": "c", "text": "Significant impact (neglected relationships)"}
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Have you ever lied about the time spent playing video games?",
+      "answers": [
+        {"option": "a", "text": "Never"},
+        {"option": "b", "text": "Rarely"},
+        {"option": "c", "text": "Sometimes"},
+        {"option": "d", "text": "Frequently"}
+      ]
+    },
+    {
+      "id": 4,
+      "question": "How do you react when you cannot play video games?",
+      "answers": [
+        {"option": "a", "text": "No particular reaction"},
+        {"option": "b", "text": "Slight disappointment"},
+        {"option": "c", "text": "Irritability or frustration"},
+        {"option": "d", "text": "Urgent need to play"}
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Have you ever felt an increasing need to play to achieve the same feeling of pleasure or excitement?",
+      "answers": [
+        {"option": "a", "text": "No, never"},
+        {"option": "b", "text": "Rarely"},
+        {"option": "c", "text": "Sometimes"},
+        {"option": "d", "text": "Frequently"}
+      ]
+    },
+    {
+      "id": 6,
+      "question": "To what extent do video games affect your sleep?",
+      "answers": [
+        {"option": "a", "text": "No impact"},
+        {"option": "b", "text": "Slight disturbance"},
+        {"option": "c", "text": "Occasional insomnia"},
+        {"option": "d", "text": "Frequent insomnia"}
+      ]
+    },
+    {
+      "id": 7,
+      "question": "Have you ever neglected professional or school responsibilities because of video games?",
+      "answers": [
+        {"option": "a", "text": "Never"},
+        {"option": "b", "text": "Rarely"},
+        {"option": "c", "text": "Sometimes"},
+        {"option": "d", "text": "Frequently"}
+      ]
+    },
+    {
+      "id": 8,
+      "question": "Have you tried to reduce your gaming time without success?",
+      "answers": [
+        {"option": "a", "text": "Yes, successfully"},
+        {"option": "b", "text": "Yes, but without success"},
+        {"option": "c", "text": "No, I haven't tried"}
+      ]
+    },
+    {
+      "id": 9,
+      "question": "How do you feel when you are not playing video games for an extended period?",
+      "answers": [
+        {"option": "a", "text": "Indifferent"},
+        {"option": "b", "text": "Mild boredom"},
+        {"option": "c", "text": "Irritability or restlessness"},
+        {"option": "d", "text": "Depression or anxiety"}
+      ]
+    },
+    {
+      "id": 10,
+      "question": "Have you ever borrowed money to buy video games or related content?",
+      "answers": [
+        {"option": "a", "text": "Never"},
+        {"option": "b", "text": "Rarely"},
+        {"option": "c", "text": "Sometimes"},
+        {"option": "d", "text": "Frequently"}
+      ]
+    },
+    {
+      "id": 11,
+      "question": "How would you describe your level of concentration while playing video games?",
+      "answers": [
+        {"option": "a", "text": "Excellent"},
+        {"option": "b", "text": "Good"},
+        {"option": "c", "text": "Average"},
+        {"option": "d", "text": "Low"}
+      ]
+    },
+    {
+      "id": 12,
+      "question": "Have you ever experienced physical symptoms such as headaches, muscle pain, or vision problems due to extended gaming sessions?",
+      "answers": [
+        {"option": "a", "text": "Never"},
+        {"option": "b", "text": "Rarely"},
+        {"option": "c", "text": "Sometimes"},
+        {"option": "d", "text": "Frequently"}
+      ]
+    },
+    {
+      "id": 13,
+      "question": "Have video games negatively impacted your productivity at work or school?",
+      "answers": [
+        {"option": "a", "text": "No impact"},
+        {"option": "b", "text": "Slight impact"},
+        {"option": "c", "text": "Moderate impact"},
+        {"option": "d", "text": "Significant impact"}
+      ]
+    },
+    {
+      "id": 14,
+      "question": "How often have you neglected important activities to play video games (e.g., personal hygiene, household chores)?",
+      "answers": [
+        {"option": "a", "text": "Never"},
+        {"option": "b", "text": "Rarely"},
+        {"option": "c", "text": "Sometimes"},
+        {"option": "d", "text": "Frequently"}
+      ]
+    },
+    {
+      "id": 15,
+      "question": "Have you ever had family disputes or conflicts with friends due to your gaming time?",
+      "answers": [
+        {"option": "a", "text": "Never"},
+        {"option": "b", "text": "Rarely"},
+        {"option": "c", "text": "Sometimes"},
+        {"option": "d", "text": "Frequently"}
+      ]
+    },
+    {
+      "id": 16,
+      "question": "What is your emotional state after playing video games for long periods?",
+      "answers": [
+        {"option": "a", "text": "Energized and happy"},
+        {"option": "b", "text": "Tired but satisfied"},
+        {"option": "c", "text": "Irritated or depressed"},
+        {"option": "d", "text": "Anxious or stressed"}
+      ]
+    },
+    {
+      "id": 17,
+      "question": "Have you ever missed social events to play video games?",
+      "answers": [
+        {"option": "a", "text": "Never"},
+        {"option": "b", "text": "Rarely"},
+        {"option": "c", "text": "Sometimes"},
+        {"option": "d", "text": "Frequently"}
+      ]
+    },
+    {
+      "id": 18,
+      "question": "Have you developed specific routines or rituals before or during video game sessions (e.g., superstitions, specific preparation)?",
+      "answers": [
+        {"option": "a", "text": "Never"},
+        {"option": "b", "text": "Rarely"},
+        {"option": "c", "text": "Sometimes"},
+        {"option": "d", "text": "Frequently"}
+      ]
+    },
+    {
+      "id": 19,
+      "question": "Do you feel a constant need to check for updates, new versions, or announcements related to video games?",
+      "answers": [
+        {"option": "a", "text": "Never"},
+        {"option": "b", "text": "Rarely"},
+        {"option": "c", "text": "Sometimes"},
+        {"option": "d", "text": "Frequently"}
+      ]
+    },
+    {
+      "id": 20,
+      "question": "How often do you think about video games when you are not playing?",
+      "answers": [
+        {"option": "a", "text": "Almost never"},
+        {"option": "b", "text": "Less than an hour"},
+        {"option": "c", "text": "1 to 2 hours"},
+        {"option": "d", "text": "More than 2 hours"}
+      ]
+    },
+    {
+      "id": 21,
+      "question": "Have you ever hidden or minimized the amount of time you spend playing video games from your loved ones?",
+      "answers": [
+        {"option": "a", "text": "Never"},
+        {"option": "b", "text": "Rarely"},
+        {"option": "c", "text": "Sometimes"},
+        {"option": "d", "text": "Frequently"}
+      ]
+    },
+    {
+      "id": 22,
+      "question": "Do you often feel guilty after playing video games for an extended period?",
+      "answers": [
+        {"option": "a", "text": "Never"},
+        {"option": "b", "text": "Rarely"},
+        {"option": "c", "text": "Sometimes"},
+        {"option": "d", "text": "Frequently"}
+      ]
+    },
+    {
+      "id": 23,
+      "question": "Have you ever missed personal or professional commitments due to extended gaming sessions?",
+      "answers": [
+        {"option": "a", "text": "Never"},
+        {"option": "b", "text": "Rarely"},
+        {"option": "c", "text": "Sometimes"},
+        {"option": "d", "text": "Frequently"}
+      ]
+    },
+    {
+      "id": 24,
+      "question": "Have you experienced memory or concentration problems outside of gaming after a prolonged gaming session?",
+      "answers": [
+        {"option": "a", "text": "Never"},
+        {"option": "b", "text": "Rarely"},
+        {"option": "c", "text": "Sometimes"},
+        {"option": "d", "text": "Frequently"}
+      ]
+    },
+    {
+      "id": 25,
+      "question": "Have video games negatively impacted your romantic life?",
+      "answers": [
+        {"option": "a", "text": "No impact"},
+        {"option": "b", "text": "Slight impact"},
+        {"option": "c", "text": "Moderate impact"},
+        {"option": "d", "text": "Significant impact"}
+      ]
+    },
+    {
+      "id": 26,
+      "question": "Have you ever sacrificed physical or sports activities to play video games?",
+      "answers": [
+        {"option": "a", "text": "Never"},
+        {"option": "b", "text": "Rarely"},
+        {"option": "c", "text": "Sometimes"},
+        {"option": "d", "text": "Frequently"}
+      ]
+    },
+    {
+      "id": 27,
+      "question": "Do you feel the need to play video games to escape from problems or negative feelings?",
+      "answers": [
+        {"option": "a", "text": "Never"},
+        {"option": "b", "text": "Rarely"},
+        {"option": "c", "text": "Sometimes"},
+        {"option": "d", "text": "Frequently"}
+      ]
+    },
+    {
+      "id": 28,
+      "question": "Have you ever experienced significant mood swings when you couldn't play video games?",
+      "answers": [
+        {"option": "a", "text": "Never"},
+        {"option": "b", "text": "Rarely"},
+        {"option": "c", "text": "Sometimes"},
+        {"option": "d", "text": "Frequently"}
+      ]
+    },
+    {
+      "id": 29,
+      "question": "How would you rate your level of dependence or emotional attachment to video games?",
+      "answers": [
+        {"option": "a", "text": "Low"},
+        {"option": "b", "text": "Moderate"},
+        {"option": "c", "text": "High"},
+        {"option": "d", "text": "Very high"}
+      ]
+    }
+  ]
+  

@@ -34,6 +34,8 @@ body{
   .signup-label{
     @apply block mb-1 font-semibold;
   }
+
+
 }
 
 .text-gradient {
@@ -71,6 +73,10 @@ body{
     #6d6d6d -78.47%,
     #11101d 91.61%
   );
+}
+
+.bg-red{
+  background: linear-gradient(#ff796f, #bd261b);
 }
 
 .bg-black-gradient-2 {
@@ -122,6 +128,22 @@ body{
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+}
+
+.flip{
+  animation: flip-flop 1.5s linear infinite;
+}
+
+@keyframes flip-flop {
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-10px);
+  }
+  100%{
+    transform: translateY(0);
   }
 }
 

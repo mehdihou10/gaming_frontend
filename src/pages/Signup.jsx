@@ -1,14 +1,26 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link,useNavigate } from 'react-router-dom'
 import { FaEye,FaEyeSlash,FaMinusCircle,FaCheckCircle } from "react-icons/fa"
-import { IoMdCloseCircle } from "react-icons/io";
 import { useState,useRef,useEffect } from 'react'
 import games from '../images/games.jpg';
 import ProcessSign from '../components/Process.Sign';
 import Swal from 'sweetalert2';
+import { setCookie } from '../functions/Cookie';
 
 
 const Signup = () => {
+
+  const navigate = useNavigate();
+
+
+  //security check
+  useEffect(()=>{
+
+    if(!window.localStorage.getItem('user')){
+
+      navigate('/auth/user');
+    }
+  },[])
 
   //refs
   const passwordRef = useRef(null);
@@ -17,94 +29,84 @@ const Signup = () => {
   //states
   const [watchPassword,setWatchPassword] = useState(false);
 
-  const [firstName,setFirstName] = useState('');
-  const [lastName,setLastName] = useState('');
+  const [userName,setUserName] = useState('');
+  const [fullName,setFullName] = useState('');
   const [email,setEmail] = useState('');
   const [password,setPassword] = useState('');
   const [dateOfBirth,setDateOfBirth] = useState('');
 
   const [isCorrect,setIsCorrect] = useState(false);
 
-  const [users,setUsers] = useState([]);
-
-  //get all users
-
-  useEffect(()=>{
-
-    fetch('http://localhost:8000/data/user').then(res=>res.json())
-
-    .then(data=>setUsers(data))
-  },[])
 
 
- 
 
   const submitData = (e)=>{
     e.preventDefault();
 
-    let check = false;
 
-    for(let user of users){
-
-      if(email === user.email){
-        check = true;
-        break;
-      }
-    }
-
-
-    if(firstName.trim() === '' || lastName.trim() === '' || password.trim() === ''
+    if(userName.trim() === '' || fullName.trim() === '' || password.trim() === '' || isCorrect === false
     || ['male','female'].includes(genderRef.current.value.toLowerCase()) === false){
       Swal.fire({
         title: isCorrect ? 'You Must Fill In All Fields!!' : 'Write a Valid Password'
       })
     }
 
-    else if(check){
-      Swal.fire({
-        title: "User Already Signed!"
-      })
-    }
+  
 
     else{
 
       const obj = {
-        first_name: firstName,
-        last_name: lastName,
-        username: `${firstName} ${lastName}`,
+        username: userName,
+        full_name: fullName,
+        user_type: window.localStorage.getItem('user'),
         email: email,
         password: password,
         gender: genderRef.current.value,
         date_of_birth: dateOfBirth
       }
   
-      fetch('http://localhost:8000/register',{
+      fetch('http://localhost:8000/auth/register',{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(obj)
+
       }).then(res=>res.json())
+
       .then(data=>{
 
-       Swal.fire({
+  
+        if(data.token){
+          setCookie(data.token,30);
 
-        title: data.status ? 'Success' : 'Something Bad Happend'
-       })
+          navigate('/');
+
+        }
+
+        else{
+          const errors = data.detail;
+
+          for(let error of errors){
+            Swal.fire({
+              title: error.msg
+            })
+          }
+
+        }
+      
+     
 
       })
 
 
     }
- 
-
-
 
   }
 
 
   return (
-  <div className='lg:flex'>
+  <div className='lg:flex lg:h-screen'>
 
     <div className="hidden lg:block image basis-[40%]">
     <img className='w-full h-screen object-cover' src={games} alt="image" />
@@ -121,13 +123,13 @@ const Signup = () => {
       <div className="signup-parent">
 
         <div>
-          <label className='signup-label' htmlFor="first-name">First Name</label>
-          <input onChange={(e)=> setFirstName(e.target.value)} className='signup-input' required id='first-name' type="text"/>
+          <label className='signup-label' htmlFor="user-name">User Name</label>
+          <input onChange={(e)=> setUserName(e.target.value)} className='signup-input' required id='user-name' type="text"/>
         </div>
 
         <div>
-          <label className='signup-label' htmlFor="last-name">Last Name</label>
-          <input onChange={(e)=> setLastName(e.target.value)} className='signup-input' required id='last-name' type="text"/>
+          <label className='signup-label' htmlFor="full-name">Full Name</label>
+          <input onChange={(e)=> setFullName(e.target.value)} className='signup-input' required id='full-name' type="text"/>
         </div>
 
 
@@ -144,10 +146,14 @@ const Signup = () => {
         <div>
           <label className='signup-label' htmlFor="password">Password</label>
 
-          <div className='relative'>
-          <input ref={passwordRef} onChange={(e)=>{
+          <div>
+
+            <div className="relative">
+            <input ref={passwordRef} onChange={(e)=>{
             setPassword(e.target.value);
-            if(password === '' || (password.length < 8 || /\w+/ig.test(password) === false || /\d+/ig.test(password) === false)){
+            const psw = passwordRef.current.value;
+
+            if(psw === '' || psw.length < 8 || /\w+/ig.test(psw) === false || /\d+/ig.test(psw) === false){
               setIsCorrect(false)
 
             } else{
@@ -174,17 +180,19 @@ const Signup = () => {
             }
           
           </div>
+            </div>
+        
           
           <div className='mt-1 text-[15px]'>
 
           {password === '' ? <div className='text-gray-500'>Write a solid password</div>
           
           : (password.length < 8 || /\w+/ig.test(password) === false || /\d+/ig.test(password) === false) ?
-          <div className='text-red-600'>Invalid Email</div>
+          <div className='text-red-600'>Invalid Password</div>
 
         :<div className='text-green-400'>Just Perfect</div>}
 
-   </div>
+          </div>
          
 
           
@@ -218,16 +226,22 @@ const Signup = () => {
       </div>
 
 {/* submit button  */}
-      <div className="text-center mt-[40px]">
+      <div className="text-center mt-[20px]">
 
       <button className='bg-purple-500 text-white font-semibold w-[150px] h-[45px] rounded-lg mx-auto'>
         Submit
       </button>
+      <p className="mt-2 text-center text-gray-700">
+          If You Have An Account{' '}
+          <Link to='/auth/login' className="text-blue-500">
+            Login
+          </Link>
+        </p>
 
       </div>
 
       </form>
-
+     
 
     </div>
 
